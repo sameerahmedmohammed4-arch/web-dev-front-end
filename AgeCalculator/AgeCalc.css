@@ -1,0 +1,61 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    align-items: center;
+
+}
+.main{
+    background-color: pink;
+    border-radius: 10px ;
+    border: 2px solid black;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    
+}
+.main h2 {
+    font-size: 40px;
+    color: aliceblue;
+}
+.main label {
+    width: 100%;
+    font-size: 30px;
+}
+.main input {
+    margin: 20px 0px;
+    padding: 8px;
+    font-size: 16px;
+}
+.main button {
+    font-size: 15px;
+    padding:10px;
+    border-radius:10px;
+    background-color: rgb(19, 213, 227);
+    color: purple;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.main button:hover{
+    transform: scale(0.9);
+}
+.main p {
+    font-size: 20px;
+}
+p{
+  color: purple;
+}
+/* button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+} */
+ 
