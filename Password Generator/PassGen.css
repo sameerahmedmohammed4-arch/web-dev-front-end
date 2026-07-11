@@ -1,0 +1,57 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+body{
+  background-color: rgb(240, 140, 140);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  
+}
+
+.container{
+ 
+  border: 2px solid white;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 0px  gray;
+  align-items: center;
+}
+
+input{
+  width: 234.75px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+input:focus{
+    outline: none;
+}
+
+button{
+  font-size: 15px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 9px 9px;
+  background-color: blue;
+  color: antiquewhite;
+}
+
+button:active{
+  background-color: whitesmoke;
+  color: blue;
+}
+#copy{
+  margin: 20px;
+}
+  
