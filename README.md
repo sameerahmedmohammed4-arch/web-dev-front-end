@@ -4,19 +4,19 @@ This repository contains my JavaScript practice programs, web development exerci
 
 📚 Topics Covered
 
-Variables
-Operators
-Conditions
-Loops
-Functions
-DOM Manipulation
-Events
-Basic Styling with CSS
+-Variables
+-Operators
+-Conditions
+-Loops
+-Functions
+-DOM Manipulation
+-Events
+-Basic Styling with CSS
 🚀 Mini Projects
 
-Age Calculator
-Profile Card
-Loading Spinner
+-Age Calculator
+-Profile Card
+-Loading Spinner
 And more daily practice project...
 🎯 Goal
 
