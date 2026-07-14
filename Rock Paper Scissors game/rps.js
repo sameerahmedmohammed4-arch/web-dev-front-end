@@ -15,7 +15,7 @@ let comChoice = () =>{
 }  
 
 const drawGame = () => {
-    console.log('draw');
+    // console.log('draw');
     msg.style.backgroundColor = "white";
     msg.style.color = "black";
     msg.innerHTML = "It's a draw";
