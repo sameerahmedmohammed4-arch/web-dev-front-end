@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ExpenseTracker.css">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+<h1> <i class="fa-solid fa-wallet"></i> Expense Tracker</h1>
+  <div class="main">
+    <div class="details">
+        <label for="expenseName">Expense Name</label>
+        <input type="text" id="expenseName" placeholder="Enter expense name" required>
+    </div>
+    <div class="details">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" placeholder="Enter Amount" required>
+    </div>
+    <div class="details">
+        <label for="category">Category</label>
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="Clothes">Clothes </option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Grocery" >Grocery</option>
+            <option value="Income" >Income</option>
+        </select>
+    </div>
+    <div class="details">
+        <label>date</label>
+        <input id="date" type="date" required>
+    </div>
+    <div class="details">
+        <button id="btn" required>Add Expense</button>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="total">
+    <div class="icon">
+        <i class="fa-solid fa-wallet"></i>
+    </div>
+    <div class="total-names">
+        <label for="Total Expenses">Total Expenses</label>
+        <span class="price">$1,250.00</span>
+    </div>
+  </div>
+  <div class="total">
+    <div class="icon">
+        <i class="fa-solid fa-arrow-trend-up" style="color: darkgreen;"></i>
+    </div>
+    <div class="total-names">
+        <label for="Total Income" >Total Income</label>
+        <span class="price" style="color: darkgreen;">$2000.00</span>
+    </div>
+  </div><div class="total">
+    <div class="icon">
+        <i class="fa-solid fa-scale-balanced" ></i>
+    </div>
+    <div class="total-names">
+        <label for="Balance">Balance</label>
+        <span class="price">$750.00</span>
+    </div>
+   </div>
+  </div>
+  <!-- <div class="main-container">
+    <div class="names" style="padding-right: 0px;">
+        <div ><p>Name</p></div>
+        <div ><p>Grocery Shopping</p></div>
+        <div ><p>Salary</p></div>
+        <div ><p>Electricity Bill</p></div>
+        <div ><p>Movie Tickets</p></div>
+        <div ><p>Freelance Work</p></div>
+    </div>
+    <div class="names" style="padding: 20px 0px;">
+        <div ><p>Category</p></div>
+        <div ><span class="categ-details"> <span id="food-icon"><i class="fa-solid fa-cart-shopping"></i></span ><p style="color: blue;">Food</p><span></span></span></div>
+        <div ><span class="categ-details"> <span id="income-icon"><i class="fa-solid fa-money-bill-trend-up"></i></span><p style="color: green;">Income</p><span></span></span></div>
+        <div ><span class="categ-details"> <span id="utility-icon"><i class="fa-solid fa-bolt"></i></span ><p style="color: orangered;">Utilities</p><span></span></span></div>
+        <div ><span class="categ-details"> <span id="Entertainment-icon"><i class="fa-solid fa-tv"></i></span ><p style="color: violet;">Entertainment</p><span></span></span></div>
+        <div ><span class="categ-details"> <span id="income-icon"><i class="fa-solid fa-money-bill-trend-up"></i></span ><p style="color: green;">Income</p><span></span></span></div>
+    </div>
+    <div class="names" style="padding: 20px 0px;">
+        <div ><p>Amount</p></div>
+        <div ><p>0</p></div>
+        <div ><p>0</p></div>
+        <div ><p>0</p></div>
+        <div ><p>0</p></div>
+        <div ><p>0</p></div>
+    </div>
+    <div class="names" style="padding: 20px 0px;">
+        <div ><p>Date</p></div>
+        <div ><p>2025-05-27</p></div>
+        <div ><p>2025-05-27</p></div>
+        <div ><p>2025-05-27</p></div>
+        <div ><p>2025-05-27</p></div>
+        <div ><p>2025-05-27</p></div>
+    </div>
+    <div class="names" style="padding: 20px 0px;">
+        <div ><p>Actions</p></div>
+        <div ><button>Edit</button><button>Delete</button></div>
+        <div ><button>Edit</button><button>Delete</button></div>
+        <div ><button>Edit</button><button>Delete</button></div>
+        <div ><button>Edit</button><button>Delete</button></div>
+        <div ><button>Edit</button><button>Delete</button></div>
+    </div>
+  </div> -->
+  <div class="main-container">
+
+    <!-- Header -->
+    <div class="table-header">
+        <div>Name</div>
+        <div>Category</div>
+        <div>Amount</div>
+        <div>Date</div>
+        <div>Actions</div>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="table-row">
+        <div>Grocery Shopping</div>
+
+        <div>
+            <span class="badge food">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Food
+            </span>
+        </div>
+
+        <div class="expense">$120.00</div>
+
+        <div>2025-05-27</div>
+
+        <div class="actions">
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+                Edit
+            </button>
+
+            <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="table-row">
+        <div>Salary</div>
+
+        <div>
+            <span class="badge income">
+                <i class="fa-solid fa-briefcase"></i>
+                Income
+            </span>
+        </div>
+
+        <div class="income-amount">$2,000.00</div>
+
+        <div>2025-05-26</div>
+
+        <div class="actions">
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+                Edit
+            </button>
+
+            <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="table-row">
+        <div>Electricity Bill</div>
+
+        <div>
+            <span class="badge utility">
+                <i class="fa-solid fa-bolt"></i>
+                Utilities
+            </span>
+        </div>
+
+        <div class="expense">$80.00</div>
+
+        <div>2025-05-25</div>
+
+        <div class="actions">
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+                Edit
+            </button>
+
+            <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+
+    <!-- Row 4 -->
+    <div class="table-row">
+        <div>Movie Tickets</div>
+
+        <div>
+            <span class="badge entertainment">
+                <i class="fa-solid fa-ticket"></i>
+                Entertainment
+            </span>
+        </div>
+
+        <div class="expense">$50.00</div>
+
+        <div>2025-05-24</div>
+
+        <div class="actions">
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+                Edit
+            </button>
+
+            <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="table-row">
+        <div>Freelance Work</div>
+
+        <div>
+            <span class="badge income">
+                <i class="fa-solid fa-briefcase"></i>
+                Income
+            </span>
+        </div>
+
+        <div class="income-amount">$500.00</div>
+
+        <div>2025-05-23</div>
+
+        <div class="actions">
+            <button class="edit-btn">
+                <i class="fa-solid fa-pen"></i>
+                Edit
+            </button>
+
+            <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+            </button>
+        </div>
+    </div>
+
+</div>
+
+  
+</body>
+</html>
