@@ -1,4 +1,3 @@
-
 // Select all boxes
 const boxes = [
   document.querySelector("#box1"),
@@ -7,7 +6,7 @@ const boxes = [
   document.querySelector("#box4")
 ];
 
-// Define click colors (cycle through them if you want)
+// Define three colors for each box
 const clickColors = [
   ["cyan", "blue", "purple"],   // box1
   ["lime", "green", "olive"],   // box2
@@ -24,15 +23,19 @@ const clickCounts = new Array(boxes.length).fill(0);
 
 boxes.forEach((box, index) => {
   box.addEventListener("click", () => {
-    // Increment click count for this box
+    // Increment click count
     clickCounts[index]++;
 
-    // Pick color based on click count (cycle through array)
-    const colorIndex = (clickCounts[index] - 1) % clickColors[index].length;
-    box.style.backgroundColor = clickColors[index][colorIndex];
-
-    // Update text with click count
-    box.innerHTML = `clicked ${clickCounts[index]} time${clickCounts[index] > 1 ? "s" : ""}`;
+    if (clickCounts[index] <= clickColors[index].length) {
+      // Show one of the three colors
+      box.style.backgroundColor = clickColors[index][clickCounts[index] - 1];
+      box.innerHTML = `clicked ${clickCounts[index]} time${clickCounts[index] > 1 ? "s" : ""}`;
+    } else {
+      // On the 4th click → reset to default
+      box.style.backgroundColor = defaultColors[index];
+      box.innerHTML = defaultTexts[index];
+      clickCounts[index] = 0; // reset cycle
+    }
   });
 });
 
