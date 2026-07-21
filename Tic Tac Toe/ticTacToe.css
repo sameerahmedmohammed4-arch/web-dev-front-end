@@ -45,6 +45,14 @@ body{
   color: #fff;
   border-radius: 1rem;
 }
+#new-btn:hover{
+  background-color:aquamarine;
+  color: black;
+}
+#reset-btn:hover{
+  background-color: aqua;
+  color: black;
+}
 #new-btn{
   padding: 1rem;
   font-size: 1.25rem;
